@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = mongoose.Schema({
-  UserName: {
+  username: {
     type: String,
     required: [true, "Please provide a UserName"],
     lowercase: true,
@@ -13,17 +13,16 @@ const userSchema = mongoose.Schema({
     type: String,
     default: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
   },
-  Email: {
+  email: {
     type: String,
     required: [true, "Please provide a email"],
     unique: true,
     lowercase: true,
   },
-  Password: {
+  password: {
     type: String,
     required: [true, "Please provide a Password"],
     min: 7,
-
   }
 });
 
