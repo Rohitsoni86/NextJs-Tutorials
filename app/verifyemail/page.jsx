@@ -29,6 +29,7 @@ export default function VerifyEmailPage() {
         const urlToken = window.location.search.split("=")[1];
         console.log(urlToken);
         setToken(urlToken || "");
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
@@ -36,6 +37,7 @@ export default function VerifyEmailPage() {
         if(token.length > 0) {
             verifyUserEmail();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [token]);
 
 
