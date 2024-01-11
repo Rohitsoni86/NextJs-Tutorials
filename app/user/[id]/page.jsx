@@ -1,7 +1,26 @@
-import Link from "next/link"
+"use client"
 
+import Link from "next/link"
+import { useRouter } from "next/navigation"
+import axios from "axios"
+import toast from "react-hot-toast"
 
 export default function UserProfile({params}) {
+  const router = useRouter()
+
+  const handleLogout = async () => {
+      try{
+        const resp = await axios.get("/api/logout")
+        toast.success("Logout Successfully !!")
+        router.push("/login")
+      }catch(err){
+        console.log({errorMsg:err});
+      }
+      finally{
+        console.log("Loged Out !!");
+      }
+  }
+
   return (
       <>
         <div className="bg-slate-700">
@@ -136,10 +155,10 @@ export default function UserProfile({params}) {
             </div>
           </div>
           <div className="w-full p-4 m-2 text-center">
-        <Link
-          href="/login"
+        <button
+          onClick={handleLogout}
           className="font-medium w-72 px-4 py-4 bg-gray-100  rounded text-center text-purple-600 hover:underline">Logout
-         </Link>
+         </button>
         </div>
         </div>
         
