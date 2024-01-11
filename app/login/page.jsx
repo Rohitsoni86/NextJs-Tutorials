@@ -26,7 +26,7 @@ export default function LoginPage() {
 
             const response = await axios.post("/api/login", userData);
             console.log("Signup success", response.data);
-            router.push(`/user/${userData.email}`);
+            router.push(`/user`);
 
         } catch (error) {
             console.log("Signup failed", error.message);
