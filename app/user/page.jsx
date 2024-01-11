@@ -6,7 +6,7 @@ import toast from "react-hot-toast"
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export default function page() {
+export default function Page() {
   const router = useRouter()
 
   const [userLogId, setUserLogId] = useState("nothing")

@@ -2,7 +2,7 @@
 import Image from 'next/image'
 //import profilePic from '../public/images/11111-min.png'
 import profilePic from '../../public/images/11111-min.png'
-export default function page() {
+export default function AboutPage() {
   return (
     <>
        {/* ABOUT SECTION */}

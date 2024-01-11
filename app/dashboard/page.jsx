@@ -1,5 +1,5 @@
 "use client"
-export default function page() {
+export default function DashboardPage() {
   return (
     <div>Dashboard page</div>
   )

@@ -1,5 +1,5 @@
 "use client"
-export default function page() {
+export default function PricingPage() {
   return (
     <div className="bg-gray-100 min-h-screen py-12 flex items-center justify-center">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
