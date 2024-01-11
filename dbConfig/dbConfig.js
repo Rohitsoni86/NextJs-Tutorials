@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 export async function connect() {
     try {
-        mongoose.connect('mongodb://127.0.0.1:27017/learnnextjs');
+        mongoose.connect(process.env.MONGO_DB_URL);
         const connection = mongoose.connection;
 
         connection.on('connected', () => {
